@@ -1,0 +1,26 @@
+{%  extends "base.html" %}
+{%block start%}
+<a href="/contact/">
+    Contact
+</a>
+|
+<a href="/about/">
+    Abount
+</a>
+
+    <h1>Welcome!!, This is Django Tutorial</h1>
+    <table class="container">
+    <tr>
+        <th>SR No.</th>
+        <th>Name</th>
+        <th>age</th>
+    </tr>
+    {% for p in people  %}
+    <tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{p.name}}</td>
+    <td>{{p.age}}</td>
+    </tr>
+{%endfor%}
+</table>
+{%endblock%}
